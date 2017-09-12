@@ -1,0 +1,3 @@
+I'll comment my code
+I'll read the styleguide for python (https://www.python.org/dev/peps/pep-0008/)
+I'll savw files as utf-8 without BOM 

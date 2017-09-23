@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html><body>
+
+<se>
+<w>я<ana lex="я" gr="SPRO,ед,1-л=им" /><ana lex="я" gr="S,сокр=пр,мн" /><ana lex="я" gr="S,сокр=пр,ед" /><ana lex="я" gr="S,сокр=вин,мн" /><ana lex="я" gr="S,сокр=вин,ед" /><ana lex="я" gr="S,сокр=дат,мн" /><ana lex="я" gr="S,сокр=дат,ед" /><ana lex="я" gr="S,сокр=род,мн" /><ana lex="я" gr="S,сокр=род,ед" /><ana lex="я" gr="S,сокр=твор,мн" /><ana lex="я" gr="S,сокр=твор,ед" /><ana lex="я" gr="S,сокр=им,мн" /><ana lex="я" gr="S,сокр=им,ед" /></w>
+<w>так<ana lex="так" gr="ADVPRO=" /><ana lex="так" gr="PART=" /><ana lex="так" gr="CONJ=" /></w>
+<w>хочу<ana lex="хотеть" gr="V,несов,пе=непрош,ед,изъяв,1-л" /></w>
+<w>спать<ana lex="спать" gr="V,несов,нп=инф" /></w>
+<w>просто<ana lex="просто" gr="PART=" /><ana lex="просто" gr="ADV=" /><ana lex="простой" gr="A=ед,кр,сред" /><ana lex="просто" gr="ADV,прдк=" /></w>
+<w>невозможно<ana lex="невозможно" gr="ADV,прдк=" /><ana lex="невозможно" gr="ADV=" /><ana lex="невозможный" gr="A=ед,кр,сред" /></w>
+</se>
+</body></html>

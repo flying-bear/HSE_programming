@@ -1,0 +1,3 @@
+<a href="/novosti/monitoring-na-chetyre-goda.html" class="news-link text-none" title="Мониторинг на четыре года">
+    <p class="news-title font-open-semibold">Мониторинг на четыре года</p>
+</a>

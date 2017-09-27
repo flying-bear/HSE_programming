@@ -27,10 +27,3 @@ def getMeta(html): ## Вынимает из HTML имя автора, дату �
         meta[3] = 'https://ks-yanao.ru' + source.group(1).strip()
     return meta
 
-
-def main():
-    pass
-        
-
-if __name__ == "__main__":
-    main()

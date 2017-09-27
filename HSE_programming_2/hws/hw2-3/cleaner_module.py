@@ -14,11 +14,3 @@ def getPlainText(html): ## Вынимает из HTML текст статьи и
         withoutAddSpaces = regSpace.sub(' ', withoutHTMLSpaces)
         plainText = regLine.sub('\n', withoutAddSpaces)
     return plainText
-
-
-def main():
-    pass
-        
-
-if __name__ == "__main__":
-    main()

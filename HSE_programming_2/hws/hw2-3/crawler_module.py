@@ -15,7 +15,7 @@ def getPageHTML(url): ## по URL выдаёт HTML
 
 def getLinks(baseUrl): ## из base url (в данном случае - https://ks-yanao.ru/novosti/?PAGEN_2=) постранично ищет все ссылки на новости, выдаёт их списком
     links = []
-    for n in range(2): ##502 is the last page
+    for n in range(1): ##502 is the last page
         pagelinks = []
         pageText = getPageHTML(baseUrl + str(n+1))
         regLink = re.compile('href=".*?" class="news-link text-none"')
@@ -39,7 +39,7 @@ def crawl(baseurl):
             weirdlinks.append(url + ' - ' + link)
         if date:
             day, month, year = date.split('.')
-            directory = os.path.join(year, month)
+            directory = os.path.join('Красный_север', 'plain', year, month)
         else:
             year = 'unknown year'
             date = 'unknown date'
@@ -58,16 +58,6 @@ def crawl(baseurl):
     with open('weird links.txt', 'w', encoding = 'utf-8') as f:
         for link in weirdlinks:
             f.writeline(link)
-    with open ('meta.csv', 'w', encoding = 'utf-8') as f:
+    with open (os.path.join('Красный_север', 'metadata.csv'), 'w', encoding = 'utf-8') as f:
         f.write(csv)
     return True
-            
-
-    
-def main():
-    if crawl('https://ks-yanao.ru/novosti/?PAGEN_2='):
-        print('done')
-        
-
-if __name__ == "__main__":
-    main()

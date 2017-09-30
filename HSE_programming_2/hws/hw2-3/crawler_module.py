@@ -31,7 +31,9 @@ def crawl(baseurl):
     links = getLinks(baseurl)
     weirdlinks = []
     csv = 'path' + '\t' + 'author' + '\t' + 'sex' + '\t' + 'birthday' + '\t' + 'header' + '\t' + 'created' + '\t' + 'sphere' + '\t' + 'genre_fi' + '\t' + 'type' + '\t' + 'topic' + '\t' + 'chronotop' + '\t' + 'style' + '\t' + 'audience_age' + '\t' + 'audience_level' + '\t' + 'audience_size' + '\t' + 'source' + '\t' + 'publication' + '\t' + 'publ_year' + '\t' + 'medium' + '\t' + 'country' + '\t' + 'region' + '\t' + 'language'
+    i = 0
     for link in links:
+        i += 1
         html = getPageHTML(link)
         text = getPlainText(html)
         author, title, date, url = getMeta(html)
@@ -39,7 +41,7 @@ def crawl(baseurl):
             weirdlinks.append(url + ' - ' + link)
         if date:
             day, month, year = date.split('.')
-            directory = os.path.join('Красный_север', 'plain', year, month)
+            directory = os.path.join('ks-yanao', 'plain', year, month)
         else:
             year = 'unknown year'
             date = 'unknown date'
@@ -49,7 +51,7 @@ def crawl(baseurl):
         text = '@au ' + author + '\n@ti ' + title + '\n@da' + date + '\n@url ' + url + '\n' + text
         if not os.path.exists(directory):
             os.makedirs(directory)
-        filename = re.sub('[./\?]', '', title)
+        filename = 'article' + str(i)
         directory = os.path.join(directory, filename+'.txt')
         with open(directory, 'w', encoding = 'utf-8') as f:
                 f.write(text)
@@ -58,6 +60,6 @@ def crawl(baseurl):
     with open('weird links.txt', 'w', encoding = 'utf-8') as f:
         for link in weirdlinks:
             f.writeline(link)
-    with open (os.path.join('Красный_север', 'metadata.csv'), 'w', encoding = 'utf-8') as f:
+    with open (os.path.join('ks-yanao', 'metadata.csv'), 'w', encoding = 'utf-8') as f:
         f.write(csv)
     return True

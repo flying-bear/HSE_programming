@@ -1,18 +1,26 @@
 import os
 
-def mystem_xml(inp):
+def mystem_xml_directory(inp):
     lst = os.listdir(inp)
     for fl in lst:
-        os.system(r"C:\My\studies\HSE\programming\HSE_programming_2\hws\hw2-3\mystem.exe --format xml -i -n " + inp + os.sep + fl + " C:\My\studies\HSE\programming\HSE_programming_2\hws\hw2-3\ks-yanao\mystem-xml" + os.sep + fl)
+        print(fl + ' in mystem xml process')
+        os.system("mystem.exe --format xml -i -n " + inp + os.sep + fl + " ks-yanao\mystem-xml" + os.sep + fl)
 
-def mystem_plain (inp):
+
+def mystem_plain_directory(inp):
     lst = os.listdir(inp)
     for fl in lst:
-        os.system(r"C:\My\studies\HSE\programming\HSE_programming_2\hws\hw2-3\mystem.exe -i -n " + inp + os.sep + fl + " C:\My\studies\HSE\programming\HSE_programming_2\hws\hw2-3\ks-yanao\mystem-plain" + os.sep + fl)
+        print(fl + ' in mystem plain process')
+        os.system("mystem.exe -i -n " + inp + os.sep + fl + " ks-yanao\mystem-plain" + os.sep + fl)
 
 
+def mystem_xml(inp, fl):
+    print(fl + ' in mystem xml process')
+    command = "mystem.exe --format xml -i -n " + r" ks-yanao\plain" + os.sep + inp + os.sep + fl + " ks-yanao\mystem-xml" + os.sep + inp + os.sep + fl
+    os.system(command)
 
-##inp = r'C:\My\studies\HSE\programming\HSE_programming_2\hws\hw2-3\ks-yanao\plain\2017\09'
-##lst = os.listdir(inp)
-##for fl in lst:
-##    os.system(r"C:\My\studies\HSE\programming\HSE_programming_2\hws\hw2-3\mystem.exe -i -n " + inp + os.sep + fl + " C:\My\studies\HSE\programming\HSE_programming_2\hws\hw2-3\ks-yanao\mystem-plain" + os.sep + fl)
+
+def mystem_plain (inp, fl):
+    print(fl + ' in mystem plain process')
+    command = "mystem.exe -i -n " + r" ks-yanao\plain" + os.sep + inp + os.sep + fl + " ks-yanao\mystem-plain" + os.sep + inp + os.sep + fl
+    os.system(command)

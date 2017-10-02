@@ -2,6 +2,7 @@ import re
 
 
 def getPlainText(html): ## Вынимает из HTML текст статьи и чистит от тегов, лишних пробелов и переносов строк
+    print('getting plain text')
     plainText = ''
     regArticle = re.compile('<div class="description font-open-s-light nm-b">(.*?)<div', re.DOTALL)
     regTag = re.compile('<.*?>', re.DOTALL)

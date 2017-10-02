@@ -1,11 +1,12 @@
-from crawler_module import crawl
+from crawler_module import crawl, getLinks
 from mystem_module import mystem_xml, mystem_plain
 
 def main():
-    crawl('https://ks-yanao.ru/novosti/?PAGEN_2=')
-    print('downloaded')
-    mystem_xml(r'C:\My\studies\HSE\programming\HSE_programming_2\hws\hw2-3\ks-yanao\plain\2017\09')
-    mystem_plain(r'C:\My\studies\HSE\programming\HSE_programming_2\hws\hw2-3\ks-yanao\plain\2017\09')
+##    getLinks('https://ks-yanao.ru/novosti/?PAGEN_2=')
+    links = []
+    with open('links.txt', 'r', encoding = 'utf-8') as f:
+        links = f.readlines()
+    crawl(links)
     print('done')
 
 if __name__ == '__main__':

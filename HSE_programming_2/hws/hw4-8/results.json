@@ -1,0 +1,26 @@
+{
+    "userName": "lalala",
+    "userProfession": [
+        "no"
+    ],
+    "answers": {
+        "A1": "answer",
+        "A2": "answer"
+    },
+    "userAge": [
+        "11"
+    ],
+    "userPlace": "Moscow",
+    "userBirthPlace": [
+        "Moscow"
+    ],
+    "userYearsOfEducation": [
+        "11"
+    ],
+    "userSex": [
+        "male"
+    ],
+    "userEducation": [
+        "school"
+    ]
+}

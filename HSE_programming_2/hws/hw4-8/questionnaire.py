@@ -40,12 +40,14 @@ def process_userdata():
 
 @app.route('/form') #анкета с социолингвистическими полями ---> записываться в файл
 def form():
-    return render_template('form.html')
+    uid = request.args['uid']
+    return render_template('form.html', uid=uid)
 
 @app.route('/form', methods=['POST']) #анкета с социолингвистическими полями ---> записываться в файл
 def process_form():
     answers = request.form
-    data[request.args['uid']]['answers'] = answers
+    uid = request.args['uid'] 
+    data[uid]['answers'] = answers
     with open('results.json', 'a', encoding='utf-8') as f:
         json.dump(data[uid], f, ensure_ascii = False, indent = 4)
         f.write('\n')

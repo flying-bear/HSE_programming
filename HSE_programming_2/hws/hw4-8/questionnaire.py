@@ -1,6 +1,7 @@
 ##TO DO:
-##    general idea
-##    debug
+##    stats page
+##    search page
+##    results page
 
 from flask import Flask
 from flask import url_for, render_template, request, redirect
@@ -13,6 +14,8 @@ app = Flask(__name__)
 
 data = {}
 
+
+
 @app.route('/')
 def index(): #анкета с социологическими полями ---> записываться в файл
     urls = {'главная (эта страница - анкета с полями)': url_for('index'),
@@ -20,7 +23,7 @@ def index(): #анкета с социологическими полями --->
             'результаты в систематизированном виде': url_for('stats'),
             'json со всеми введенными на сайте данными': url_for('jsonify'),
             'поиск': url_for('search'),
-            'результаты поиска (попадаем сюда только после поиска)': url_for('results'),}
+            'результаты поиска (попадаем сюда только после поиска)': url_for('results')}
     return render_template('index.html')
 
 @app.route('/', methods=['POST'])

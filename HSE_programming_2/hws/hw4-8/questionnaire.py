@@ -7,6 +7,7 @@ from flask import Flask
 from flask import url_for, render_template, request, redirect
 
 import json
+import json2html
 
 from uuid import uuid4
 
@@ -53,7 +54,7 @@ def process_form():
     data[uid]['answers'] = answers
     with open('results.json', 'a', encoding='utf-8') as f:
         json.dump(data[uid], f, ensure_ascii = False, indent = 4)
-        f.write('\n')
+        f.write('\n,')
     return redirect(url_for('stats'))
 
 @app.route('/stats') # результаты в систематизированном виде
@@ -64,7 +65,14 @@ def stats():
 
 @app.route('/json')
 def jsonify(): # json со всеми введенными на сайте данными
-    ... #show your json neatly
+    with open('results.json', 'r', encoding='utf-8') as f:
+        jsontext = json.loads(f.read().strip(',') + ']')
+    with open('templates/json.html', 'w+', encoding='utf-8') as f:
+        currenttexet = f.read()
+        header = currenttexet.split('<table')[0] + ' '
+        footer = ' ' + currenttexet.split('</table>')[-1]
+        table = json2html.convert(jsontext)
+        f.write(header + table + footer)
     return render_template('json.html')
 
 

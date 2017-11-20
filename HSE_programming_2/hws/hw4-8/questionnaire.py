@@ -7,7 +7,7 @@ from flask import Flask
 from flask import url_for, render_template, request, redirect
 
 import json
-import json2html
+from json2html import *
 
 from uuid import uuid4
 
@@ -67,14 +67,14 @@ def stats():
 def jsonify(): # json со всеми введенными на сайте данными
     with open('results.json', 'r', encoding='utf-8') as f:
         jsontext = json.loads(f.read().strip(',') + ']')
-    with open('templates/json.html', 'w+', encoding='utf-8') as f:
+    with open('templates/json.html', 'r', encoding='utf-8') as f:
         currenttexet = f.read()
         header = currenttexet.split('<table')[0] + ' '
         footer = ' ' + currenttexet.split('</table>')[-1]
         table = json2html.convert(jsontext)
+    with open('templates/json.html', 'w', encoding='utf-8') as f:
         f.write(header + table + footer)
     return render_template('json.html')
-
 
 @app.route('/search')
 def search(): # поиск

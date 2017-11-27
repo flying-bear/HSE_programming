@@ -2,12 +2,12 @@
 ##    stats page
 ##    search page
 ##    results page
+##    move to SQL database
 
 from flask import Flask
 from flask import url_for, render_template, request, redirect
 
 import json
-from json2html import *
 
 from uuid import uuid4
 
@@ -39,7 +39,7 @@ def process_userdata():
     userdata['userProfession'] = request.values['userProfession'],
     userdata['userBirthPlace'] = request.values['userBirthPlace'],
     userdata['userPlace'] = request.values['userPlace']
-    data[user_id] = userdata
+    data[user_id]['personal'] = userdata
     return redirect(url_for('form', uid=user_id))
 
 @app.route('/form') #анкета с социолингвистическими полями ---> записываться в файл
@@ -59,21 +59,21 @@ def process_form():
 
 @app.route('/stats') # результаты в систематизированном виде
 def stats():
+    number_of_participants = len(data)
     ... #compute something
     return render_template('stats.html')
 
 
 @app.route('/json')
 def jsonify(): # json со всеми введенными на сайте данными
-    with open('results.json', 'r', encoding='utf-8') as f:
+    with open('results.json', 'r', encoding='utf-8') as f: ## перевести на БД
         jsontext = json.loads(f.read().strip(',') + ']')
     with open('templates/json.html', 'r', encoding='utf-8') as f:
         currenttexet = f.read()
-        header = currenttexet.split('<table')[0] + ' '
-        footer = ' ' + currenttexet.split('</table>')[-1]
-        table = json2html.convert(jsontext)
+        header = currenttexet.split('<span>')[0] + '<span>  '
+        footer = ' </span>' + currenttexet.split('</span>')[-1]
     with open('templates/json.html', 'w', encoding='utf-8') as f:
-        f.write(header + table + footer)
+        f.write(header + jsontext + footer)
     return render_template('json.html')
 
 @app.route('/search')

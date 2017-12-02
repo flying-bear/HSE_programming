@@ -34,20 +34,19 @@ def process_userdata():
     user_id = str(uuid4())
     userdata = {}
     userdata['userName'] = request.values['userName']
-    userdata['userAge'] = request.values['userAge'],
-    userdata['userSex'] = request.values['userSex'],
-    userdata['userLanguage'] = request.values['userLanguage'],
-    userdata['userEducation'] = request.values['userEducation'],
-    userdata['userYearsOfEducation'] = request.values['userYearsOfEducation'],
-    userdata['userProfession'] = request.values['userProfession'],
-    userdata['userBirthPlace'] = request.values['userBirthPlace'],
+    userdata['userAge'] = int(request.values['userAge'])
+    userdata['userSex'] = request.values['userSex']
+    userdata['userLanguage'] = request.values['userLanguage']
+    userdata['userEducation'] = request.values['userEducation']
+    userdata['userYearsOfEducation'] = int(request.values['userYearsOfEducation'])
+    userdata['userProfession'] = request.values['userProfession']
+    userdata['userBirthPlace'] = request.values['userBirthPlace']
     userdata['userPlace'] = request.values['userPlace']
     data[user_id] = {}
     data[user_id]['personal'] = userdata
     cur.execute('INSERT INTO users (uid, Name, Age, Sex, Language, Education, YearsOfEducation, Profession, BirthPlace, Place) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
-                [user_id, data[user_id]['personal']['userName'], data[user_id]['personal']['userAge'], data[user_id]['personal']['userSex'],
-                data[user_id]['personal']['userLanguage'], data[user_id]['personal']['userEducation'], data[user_id]['personal']['userYearsOfEducation'],
-                data[user_id]['personal']['userProfession'], data[user_id]['personal']['userBirthPlace'], data[user_id]['personal']['userPlace']])
+        [user_id, userdata['userName'], userdata['userAge'], userdata['userSex'], userdata['userLanguage'], userdata['userEducation'],
+         userdata['userYearsOfEducation'], userdata['userProfession'], userdata['userBirthPlace'], userdata['userPlace']])
     conn.commit()
     return redirect(url_for('form', uid=user_id))
 
@@ -61,22 +60,18 @@ def process_form():
     conn = sqlite3.connect('data.sqlite')
     cur = conn.cursor()
     answers = request.form
-    uid = request.args['uid'] 
+    uid = request.args['uid']
+    data[uid] = {}
     data[uid]['answers'] = answers
-    for i in range(1, 18):
+    for i in range(1, len(answers)):
         cur.execute('INSERT INTO answers (uid, qid, answer) Values(?, ?, ?)',
-                    [uid, i, data[uid]['answers'][str(i)]])
+                    [uid, i, data[uid]['answers']['A'+str(i)]])
     conn.commit()
     return redirect(url_for('stats'))
 
 @app.route('/stats') # результаты в систематизированном виде
 def stats():
-    number_of_participants = len(data)
-    mean_age = 0
-    for key in data:
-        mean_age += int(data[key]['userAge'])
-    mean_age = mean_age/number_of_participants
-    ... #compute something
+    ...
     return render_template('stats.html')
 
 
@@ -86,22 +81,27 @@ def jsonify(): # json со всеми введенными на сайте да�
     cur = conn.cursor()
     jsontext = {}
     cur.execute('SELECT uid FROM users')
-    uids = fetchone()
-    for u in uids:
-        jsontext[uid] = {}
-        cur.execute('SELECT * FROM users WHERE uid=?', u)
-        user_data = fetchone()
-        jsontext[uid]['personal'] = user_data
-        cur.execute('SELECT * FROM answers WHERE uid=?', u)
-        user_answers = fetchone()
-        jsontext[uid]['answers'] = user_answers
-    jsoned = json.loads(jsontext)
+    uids = cur.fetchall()
+    for urow in uids:
+        u=''.join(urow[0])
+        jsontext[u] = {}
+        cur.execute('SELECT * FROM users WHERE uid=?', urow)
+        user_data = cur.fetchone()
+        jsontext[u]['personal'] = user_data
+        cur.execute('SELECT * FROM answers WHERE uid=?', urow)
+        user_answers = cur.fetchall()
+        jsontext[u]['answers'] = user_answers
+    jsoned = json.dumps(jsontext)
     return jsoned
 
 @app.route('/search')
 def search(): # поиск
-    ... #process search return redirect(url_for('results') parametrics = parametrics)
     return render_template('search.html')
+
+@app.route('/search', methods=['POST'])
+def search(): # поиск
+    ... #process search 
+    return redirect(url_for('results'), parametrics = parametrics)
 
 @app.route('/results')
 def results(): # результаты поиска

@@ -21,40 +21,29 @@
 
 
 	<div class="container">
-		<div id="searchPage" > <!-- страница с анкетой -->
+		<div id="searchPage" >
 			<div>
-			<span>Тут можно будет что-то искать. Когда-нибудь...</span>
+				<span>Тут можно будет что-то искать. Когда-нибудь...</span>
 			</div>
-		<form id="searchForm" method="GET">
-			<div class="form-group">
-				<label for="SearchInput">Введите ваш запрос: </label><br> <input type="text" class="form-control"         id="SearchInput" name="userName"           required><!-- запрос -->
-			</div>		
-			
-			<div class="form-group" >
-				<label for="Parametr1Select">Параметр 1: </label>
-				<select class="form-control" id="Parametr1Select" name="Parametr1">
-					<option value="option1">опция 1</option>
-					<option value="option2">опция 2</option>
-					<option value="option3">опция 3</option>
-				</select>
-			</div>
-			
-			<div class="form-group">
-				<label for="CheckboxParametr">Пол: </label> <!-- checkbox parametr 2 -->
-				<div class="form-group" id="CheckboxParametr">
-					<div>
-						<input  type="checkbox" class="form-check-input" name="parametr2" value="option1" id="option1" required>
-						<label for="option1">мужской</label>
-					</div>
-					<div>
-						<input  type="checkbox" class="form-check-input" name="parametr2" value="option2" id="option2" required>
-						<label for="option2">женский</label>
-					</div>
+			<form id="searchForm" method="POST">
+				<div class="form-group">
+					<label for="placeInput">Введите искомый город проживания: </label><br> <input type="text" class="form-control" id="placeInput" name="Place">
 				</div>
-			</div>
-			
-			<button type="submit" class="btn btn-primary">Go</button>
-		</form>		
+				
+				<div class="form-group">
+					<label for="questionInput">Введите номер вопроса: </label><br> <input class="form-control" id="questionInput" name="questionNumber" type="number" min="1" max="17">
+				</div>
+				
+				<div class="form-group">
+					<label for="userMinAgeInput">Возраст (от): </label>
+					<input class="form-control" id="userMinAgeInput" name="userMinAge" type="number" min="6" max="90">
+					<label for="userMaxAgeInput"> (до): </label> 
+					<input class="form-control" id="userMaxAgeInput" name="userMaxAge" type="number" min="6" max="90">
+				</div>
+				
+				<button type="submit" class="btn btn-primary">Go</button>
+			</form>	
+		</div>
 	</div>
 
 </body>

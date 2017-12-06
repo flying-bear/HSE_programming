@@ -71,8 +71,44 @@ def process_form():
 
 @app.route('/stats') # результаты в систематизированном виде
 def stats():
-    ...
-    return render_template('stats.html')
+    conn = sqlite3.connect('data.sqlite')
+    cur = conn.cursor()
+    cur.execute('SELECT uid FROM users')
+    uids = cur.fetchall()
+    for urow in uids:
+        u=''.join(urow[0])
+    uniq = []
+    num = 0
+    male = 0
+    yearsum = 0
+    yearofedsum = 0
+    moved = 0
+    uniq_place = []
+    for urow in uids:
+        u=''.join(urow[0])
+        if u not in uniq:
+            uniq.append(u)
+            num += 1
+            cur.execute('SELECT * FROM users WHERE uid=?', urow)
+            user_data = cur.fetchall()[0]
+            if 'male' in user_data:
+                male += 1
+            yearsum += user_data[3]
+            yearofedsum += user_data[7]
+            place = user_data[-1]
+            if user_data[-2] != place:
+                moved += 1
+            if place not in uniq_place:
+                uniq_place.append(place)
+    n_places = len(uniq_place)
+    places = sorted(uniq_place)
+    places = ', '.join(places)
+    percent_male = (male/num)*100
+    average_age = yearsum/num
+    average_years_of_ed = yearofedsum/num
+    percent_moved = (moved/num)*100
+    return render_template('stats.html', num=num, percent_male=percent_male, average_age=average_age, average_years_of_ed=average_years_of_ed,
+                           percent_moved=percent_moved, n_places=n_places, places=places)
 
 
 @app.route('/json')
@@ -99,14 +135,45 @@ def search(): # поиск
     return render_template('search.html')
 
 @app.route('/search', methods=['POST'])
-def search(): # поиск
-    ... #process search 
+def process_search(): # поиск
+    parametrics = {}
+    if request.values:
+        parametrics['Place'] = request.values['Place']
+        parametrics['questionNumber'] = request.values['questionNumber']
+        parametrics['userMinAge'] = request.values['userMinAge']
+        parametrics['userMaxAge'] = request.values['userMaxAge']
+        conn = sqlite3.connect('data.sqlite')
+        cur = conn.cursor()
+        cur.execute('SELECT uid FROM users')
+        uids = cur.fetchall()
+        questionNumber = 1
+        if parametrics['questionNumber']:
+            questionNumber = parametrics['questionNumber']
+        age = [6,90]
+        if parametrics['userMinAge']:
+            age[0] = parametrics['userMinAge']
+        if parametrics['userMaxAge']:
+            age[1] = parametrics['userMaxAge']
+        needed_users = []
+        for urow in uids:
+            u=''.join(urow[0])
+            jsontext[u] = {}
+            cur.execute('SELECT * FROM users WHERE uid=?', urow)
+            user_data = cur.fetchall()[0]
+            if parametrics['Place']:
+                if parametrics['Place'] == user_data[-1]:
+                    needed_users.append(u)
+                if age[0]>user_data[3] or age[1]>user_data[3]:
+                    needed_users.pop()
+        ... #search needed users in answers
     return redirect(url_for('results'), parametrics = parametrics)
+
 
 @app.route('/results')
 def results(): # результаты поиска
-    if request.args:
-        parametrics = request.args['parametrics']
+    if request.values:
+        parametrics = request.values['parametrics']
+        
         return render_template('results.html', parametrics=parametrics)
     return redirect(url_for('search'))
 

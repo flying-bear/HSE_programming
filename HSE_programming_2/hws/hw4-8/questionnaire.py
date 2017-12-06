@@ -1,8 +1,7 @@
 ##TO DO:
-##    stats page
 ##    search page
+##        explanations
 ##    results page
-##    move to SQL database
 
 from flask import Flask
 from flask import url_for, render_template, request, redirect

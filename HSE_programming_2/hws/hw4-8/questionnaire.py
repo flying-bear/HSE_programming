@@ -8,6 +8,7 @@ from flask import url_for, render_template, request, redirect
 
 import json
 import sqlite3
+import re
 
 from uuid import uuid4
 
@@ -133,8 +134,8 @@ def jsonify(): # json со всеми введенными на сайте да�
 def search(): # поиск
     return render_template('search.html')
 
-@app.route('/search', methods=['POST'])
-def process_search(): # поиск
+@app.route('/results')
+def resultd(): # поиск
     parametrics = {}
     if request.values:
         parametrics['Place'] = request.values['Place']
@@ -145,36 +146,53 @@ def process_search(): # поиск
         cur = conn.cursor()
         cur.execute('SELECT uid FROM users')
         uids = cur.fetchall()
-        questionNumber = 1
+
+        questionNumber = 0
         if parametrics['questionNumber']:
             questionNumber = parametrics['questionNumber']
+
         age = [6,90]
         if parametrics['userMinAge']:
             age[0] = parametrics['userMinAge']
         if parametrics['userMaxAge']:
             age[1] = parametrics['userMaxAge']
+
         needed_users = []
+        users = []
         for urow in uids:
-            u=''.join(urow[0])
-            jsontext[u] = {}
+            if urow not in users:
+                users.append(urow)
             cur.execute('SELECT * FROM users WHERE uid=?', urow)
             user_data = cur.fetchall()[0]
             if parametrics['Place']:
-                if parametrics['Place'] == user_data[-1]:
-                    needed_users.append(u)
-                if age[0]>user_data[3] or age[1]>user_data[3]:
-                    needed_users.pop()
-        ... #search needed users in answers
-    return redirect(url_for('results'), parametrics = parametrics)
+                if parametrics['Place'] != user_data[-1]:
+                    continue
+            if int(age[0])>user_data[3] or int(age[1])<user_data[3]:
+                continue
+            needed_users.append(urow)
+       
+        if not needed_users:
+            return redirect(url_for('search'))
 
-
-@app.route('/results')
-def results(): # результаты поиска
-    if request.values:
-        parametrics = request.values['parametrics']
-        
-        return render_template('results.html', parametrics=parametrics)
-    return redirect(url_for('search'))
+        answers = {}
+        if not questionNumber:
+            for urow in needed_users:
+                cur.execute('SELECT * FROM answers WHERE uid=?', urow)
+                answer = cur.fetchall()
+                answers[urow[0]] = answer
+        else:
+            for urow in needed_users:
+                cur.execute('SELECT * FROM answers WHERE uid=? AND qid=?', (urow[0], questionNumber))
+                answer = cur.fetchall()
+                answers[urow[0]] = answer
+##            return(str(answers))
+        for key in answers:
+            l = answers[key]
+            n = []
+            for a in l:
+                n.append([a[1], a[2]])
+            answers[key] = n
+    return render_template('results.html', answers=answers)
 
 if __name__ == '__main__':
     app.run(debug=True)

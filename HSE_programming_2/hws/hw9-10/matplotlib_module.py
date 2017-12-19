@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from matplotlib import style
 
 def matplot(l): #list of dicts
-    fig, ax = plt.subplots(nrows=1, ncols=len(l))
+    fig, ax = plt.subplots(nrows=len(l), ncols=1)
     names = []
     X = []
     Y = []

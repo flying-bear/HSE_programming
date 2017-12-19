@@ -6,19 +6,27 @@
 import matplotlib.pyplot as plt
 from matplotlib import style
 
-def matplot(alpha, POS):
-    style.use('ggplot')
-    X = [1,   1.5, 2,   3, 5, 6]
-    Y = [1.8, 1,   3.6, 2, 1, 3]
-
-    dots = ['Первая', "Вторая", "Третья", "Четвертая", "Пятая", "Шестая"]
-
-    for x, y, d in zip(X, Y, dots):
-        plt.scatter(x, y, s=100)
-        plt.text(x+0.1, y+0.1, d) # +0.1 - это чтобы текст не наползал на маркер, а отрисовывался чуть выше и правее 
+def matplot(l): #list of dicts
+    fig, ax = plt.subplots(nrows=1, ncols=len(l))
+    names = []
+    X = []
+    Y = []
+    for i in range(len(l)):
+        names.append([])
+        X.append([])
+        Y.append([])
+        j = 0
+        d = l[i]
+        for key in d:
+            j += 3
+            names[i].append(key)
+            X[i].append(j)
+            Y[i].append(d[key])
+        plt.subplot(2, 2, i+1)
+        for x, y, d in zip(X[i], Y[i], names[i]):
+            plt.scatter(x, y, s=20)
+            plt.text(x+0.1, y+0.1, d) # +0.1 - это чтобы текст не наползал на маркер, а отрисовывался чуть выше и правее
     plt.show()
-    plt.show()
-    return True
 
 def get_alphabet_and_POS(d): #dict of POS with words as keys
     alpha = {}

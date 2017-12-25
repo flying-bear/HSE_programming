@@ -48,8 +48,6 @@ def jsonify(d):
             keys = key.split(';')
             for k in keys:
                 new_inv_d[k] = inv_d[key]
-        else:
-            new_inv_d[key] = inv_d[key]
     inv_d.update(new_inv_d)
     text_i = json.dumps(inv_d)
     with open('eng-thai.json', 'w', encoding='utf-8') as f:

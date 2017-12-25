@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html lang="en, ru">
+<head>
+
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+	<title>Англо-тайский словарь</title>
+
+	<meta name="description" content="Inquery">
+	<meta name="author" content="V">
+
+	<!--link rel="stylesheet" href="css/styles.css?v=1.0"-->
+
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+
+	<div class="container">
+		<form id="search" method="GET" action="/results">
+			<div class="form-group">
+				<label for="searchInput">Введите английское слово: </label><br> <input type="text" class="form-control" id="searchInput" name="q" required>
+			</div>
+			
+			<button type="submit" class="btn btn-primary">go</button>
+		</form>
+	</div>
+</body>
+</html>

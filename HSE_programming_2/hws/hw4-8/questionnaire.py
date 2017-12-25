@@ -135,7 +135,7 @@ def search(): # поиск
     return render_template('search.html')
 
 @app.route('/results')
-def resultd(): # поиск
+def results(): # поиск
     parametrics = {}
     if request.values:
         parametrics['Place'] = request.values['Place']

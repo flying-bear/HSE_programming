@@ -46,22 +46,8 @@ import urllib.request
 import json
 import matplotlib.pyplot as plt
 
-off = 0
-end = 10000
-raw_posts = []
-while off < end:
-    req = urllib.request.Request('https://api.vk.com/method/wall.get?owner_id=-60449041&v=5.73&offset=' + str(off) + '&access_token=7edf36a87edf36a87edf36a8e97ebd1a9977edf7edf36a8241effefb17f20cb63fb17ab')
-    response = urllib.request.urlopen(req)
-    result = response.read().decode('utf-8')
-    data = json.loads(result)
-    if off == 0:
-        end = data['response']['count']
-    raw_posts = raw_posts + list(data['response']['items'])
-    off += 100
-
-posts = {}
-for raw_post in raw_posts:
-    req = urllib.request.Request('https://api.vk.com/method/users.get?user_ids=' + str(raw_post['from_id']) + '&fields="has_photo,city,bdate,screen_name"&v=5.8&access_token=7edf36a87edf36a87edf36a8e97ebd1a9977edf7edf36a8241effefb17f20cb63fb17ab')
+def get_new_user_info(user_id, ids):
+    req = urllib.request.Request('https://api.vk.com/method/users.get?user_ids=' + str(user_id) + '&fields="has_photo,city,bdate,screen_name"&v=5.8&access_token=7edf36a87edf36a87edf36a8e97ebd1a9977edf7edf36a8241effefb17f20cb63fb17ab')
     response = urllib.request.urlopen(req)
     result = response.read().decode('utf-8')
     data = json.loads(result)
@@ -76,6 +62,36 @@ for raw_post in raw_posts:
             age = 'unknown'
     else:
         age = 'unknown'
+    ids[raw_post['from_id']] = {'age' : age, 'city' : city}
+    return {'age' : age, 'city' : city}
+
+off = 0
+end = 10000
+raw_posts = []
+while off < end:
+    req = urllib.request.Request('https://api.vk.com/method/wall.get?owner_id=-60449041&v=5.73&offset=' + str(off) + '&access_token=7edf36a87edf36a87edf36a8e97ebd1a9977edf7edf36a8241effefb17f20cb63fb17ab')
+    response = urllib.request.urlopen(req)
+    result = response.read().decode('utf-8')
+    data = json.loads(result)
+    if off == 0:
+        end = data['response']['count']
+    raw_posts = raw_posts + list(data['response']['items'])
+    off += 100
+
+posts = {}
+ids = {}
+for raw_post in raw_posts:
+    if raw_post['from_id'] not in ids:
+        user_info = get_new_user_info(raw_post['from_id'], ids)
+        age = user_info['age']
+        city = user_info['city']
+    else:
+        age = ids[raw_post['from_id']]['age']
+        city = ids[raw_post['from_id']]['city']
+    req = urllib.request.Request('https://api.vk.com/method/wall.getComments?owner_id=-60449041&post_id=' + str(raw_post['id']) + '&v=5.74&access_token=7edf36a87edf36a87edf36a8e97ebd1a9977edf7edf36a8241effefb17f20cb63fb17ab')
+    response = urllib.request.urlopen(req)
+    result = response.read().decode('utf-8')
+    data = json.loads(result)
     posts[raw_post['id']] = { 'text' : raw_post['text'],
                               'n' : len(raw_post['text'].replace('\n',' ').split()),
                               'author' : { 'id' : raw_post['from_id'], 'age' : age, 'city' : city}

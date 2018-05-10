@@ -49,7 +49,7 @@ def get_dictionary(lines):
 
 def find_form(grammar, d, known_types):
     forms = []
-    if grammar is not in known_types:
+    if grammar not in known_types:
         for key in d:
             if grammar == d[key]['tag']:
                 forms.append(key)

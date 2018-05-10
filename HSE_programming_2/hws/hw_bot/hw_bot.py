@@ -31,9 +31,9 @@ def analyze(form):
     a = morph.parse(form)[0] ## Parse(word='любимая', tag=OpencorporaTag('ADJF,Subx,Qual femn,sing,nomn'), normal_form='любимый', 
                               ## score=0.666666, methods_stack=((<DictionaryAnalyzer>, 'любимая', 367, 7),))
     an = {}
-    an['tag'] = a.tag
-    an['normal'] = a.normal_form
-    an['word'] = a.word
+    an['tag'] = str(a.tag)
+    an['normal'] = str(a.normal_form)
+    an['word'] = str(a.word)
     return an
 
 
@@ -47,26 +47,24 @@ def get_dictionary(lines):
     write_text_in_file('jsdict.json', json.dumps(dictionary, ensure_ascii = False))
                
 
-def find_form(grammar, d):
+def find_form(grammar, d, known_types):
     forms = []
-    for key in d:
-        if grammar == d[key]['tag']:
-            forms.append(grammar)
-        print(grammar)
+    if grammar is not in known_types:
+        for key in d:
+            if grammar == d[key]['tag']:
+                forms.append(key)
+            known_types[grammar] = forms
+    else:
+        forms = known_types[grammar]
     if forms:
         random_form = choice(forms)
     else:
         random_form = 'form_not_found'
+    write_text_in_file('know_types.txt', json.dunps(known_types))
     return random_form
 
 
-def main():
-    if os.path.exists('jsdict.json'):
-        dictionary = json.loads(get_file_text('jsdict.json'))
-    else:
-        lines = get_file_lines('dict.txt')
-        get_dictionary(lines)
-    phrase = input('Введите предложение.  ')
+def make_pseudorandom_phrase(phrase):
     words = phrase.split()
     new_phrase = ''
     for i in range(len(words)):
@@ -78,7 +76,17 @@ def main():
             new_phrase += find_form(g, dictionary)
         else:
             new_phrase += find_form(g, dictionary) + ' '
-    print(new_phrase)
+    return new_phrase
+
+
+def main():
+    if os.path.exists('jsdict.json'):
+        dictionary = json.loads(get_file_text('jsdict.json'))
+    else:
+        lines = get_file_lines('dict.txt')
+        get_dictionary(lines)
+    phrase = input('Введите предложение.  ')
+    print(make_pseudorandom_phrase(phrase))
     
 
 

@@ -9,7 +9,7 @@ import os
 from random import choice
 from pymorphy2 import MorphAnalyzer
 morph = MorphAnalyzer()
-dictionary = {}
+
 
 def get_file_lines(filename):
     with open(filename, 'r', encoding='utf-8') as f:
@@ -38,6 +38,7 @@ def analyze(form):
 
 
 def get_dictionary(lines):
+    dictionary = {}
     for line in lines:
         form = line.split()[-1].strip()
         analyzis = analyze(form)
@@ -45,7 +46,7 @@ def get_dictionary(lines):
         normal = analyzis['normal']
         dictionary[form] = {'tag':tag, 'normal':normal}
     write_text_in_file('jsdict.json', json.dumps(dictionary, ensure_ascii = False))
-               
+    return dictionary   
 
 def find_form(grammar, d, known_types):
     forms = []
@@ -60,22 +61,22 @@ def find_form(grammar, d, known_types):
         random_form = choice(forms)
     else:
         random_form = 'form_not_found'
-    write_text_in_file('know_types.txt', json.dunps(known_types))
+    write_text_in_file('know_types.txt', json.dumps(known_types))
     return random_form
 
 
-def make_pseudorandom_phrase(phrase):
+def make_pseudorandom_phrase(phrase, d, k_t):
     words = phrase.split()
     new_phrase = ''
     for i in range(len(words)):
         word = words[i]
         g = analyze(word)['tag']
         if i == 0:
-            new_phrase = find_form(g, dictionary).capitalize() + ' '
+            new_phrase = find_form(g, d, k_t).capitalize() + ' '
         elif i == len(words) - 1:
-            new_phrase += find_form(g, dictionary)
+            new_phrase += find_form(g, d, k_t)
         else:
-            new_phrase += find_form(g, dictionary) + ' '
+            new_phrase += find_form(g, d, k_t) + ' '
     return new_phrase
 
 
@@ -84,9 +85,13 @@ def main():
         dictionary = json.loads(get_file_text('jsdict.json'))
     else:
         lines = get_file_lines('dict.txt')
-        get_dictionary(lines)
+        dictionary = get_dictionary(lines)
+    if os.path.exists('known_types.txt'):
+        known_types = json.loads(get_file_text('known_types.txt'))
+    else:
+        known_types = {}   
     phrase = input('Введите предложение.  ')
-    print(make_pseudorandom_phrase(phrase))
+    print(make_pseudorandom_phrase(phrase, dictionary, known_types))
     
 
 

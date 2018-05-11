@@ -7,8 +7,16 @@
 import json
 import os
 from random import choice
+
+
 from pymorphy2 import MorphAnalyzer
 morph = MorphAnalyzer()
+
+
+from flask import Flask
+from flask import url_for, render_template, request, redirect
+app = Flask(__name__)
+
 
 
 def get_file_lines(filename):
@@ -80,20 +88,32 @@ def make_pseudorandom_phrase(phrase, d, k_t):
     return new_phrase
 
 
-def main():
+def check_dict():
     if os.path.exists('jsdict.json'):
         dictionary = json.loads(get_file_text('jsdict.json'))
     else:
         lines = get_file_lines('dict.txt')
         dictionary = get_dictionary(lines)
+    return dictionary
+
+
+def check_types():
     if os.path.exists('known_types.txt'):
         known_types = json.loads(get_file_text('known_types.txt'))
     else:
-        known_types = {}   
-    phrase = input('Введите предложение.  ')
-    print(make_pseudorandom_phrase(phrase, dictionary, known_types))
+        known_types = {}
+    return known_types
     
 
+@app.route('/')
+def process():
+    new_phrase = 'Туту будет новое предложение.'
+    dictionary = check_dict()
+    if request.args:
+        phrase = request.args.get('phrase')
+        known_types = check_types()
+        new_phrase = make_pseudorandom_phrase(phrase, dictionary, known_types)
+    return render_template('index.html', new_phrase = new_phrase)
 
 if __name__ == '__main__':
-    main()
+    app.run(debug=True)

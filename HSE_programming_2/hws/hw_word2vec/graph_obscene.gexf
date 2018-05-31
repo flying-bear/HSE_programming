@@ -1,0 +1,678 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf version="1.1" xmlns="http://www.gexf.net/1.1draft" xmlns:viz="http://www.gexf.net/1.1draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance">
+  <graph defaultedgetype="undirected" mode="static">
+    <nodes>
+      <node id="мразь" label="мразь" />
+      <node id="сволочь" label="сволочь" />
+      <node id="идиот" label="идиот" />
+      <node id="придурок" label="придурок" />
+      <node id="чмо" label="чмо" />
+      <node id="быдло" label="быдло" />
+      <node id="отморозок" label="отморозок" />
+      <node id="душман" label="душман" />
+      <node id="дрянь" label="дрянь" />
+      <node id="негодяй" label="негодяй" />
+      <node id="скотина" label="скотина" />
+      <node id="лох" label="лох" />
+      <node id="подонок" label="подонок" />
+      <node id="поганка" label="поганка" />
+      <node id="пидор" label="пидор" />
+      <node id="пидарас" label="пидарас" />
+      <node id="каналья" label="каналья" />
+      <node id="падла" label="падла" />
+      <node id="подстилка" label="подстилка" />
+      <node id="жлоб" label="жлоб" />
+      <node id="жмот" label="жмот" />
+      <node id="жила" label="жила" />
+      <node id="скопидом" label="скопидом" />
+      <node id="зараза" label="зараза" />
+      <node id="мымра" label="мымра" />
+      <node id="подлец" label="подлец" />
+      <node id="наглец" label="наглец" />
+      <node id="хам" label="хам" />
+      <node id="шваль" label="шваль" />
+      <node id="стерва" label="стерва" />
+      <node id="ублюдок" label="ублюдок" />
+      <node id="гад" label="гад" />
+      <node id="оболтус" label="оболтус" />
+      <node id="обормот" label="обормот" />
+      <node id="раздолбай" label="раздолбай" />
+      <node id="остолоп" label="остолоп" />
+      <node id="охламон" label="охламон" />
+      <node id="паршивец" label="паршивец" />
+      <node id="прохвост" label="прохвост" />
+      <node id="хвастун" label="хвастун" />
+      <node id="хитрец" label="хитрец" />
+      <node id="тварь" label="тварь" />
+      <node id="хмырь" label="хмырь" />
+      <node id="упырь" label="упырь" />
+      <node id="буян" label="буян" />
+      <node id="брюзга" label="брюзга" />
+      <node id="гнида" label="гнида" />
+      <node id="гондон" label="гондон" />
+      <node id="говнюк" label="говнюк" />
+      <node id="ехидна" label="ехидна" />
+      <node id="жаба" label="жаба" />
+      <node id="мочалка" label="мочалка" />
+      <node id="злыдень" label="злыдень" />
+      <node id="злюка" label="злюка" />
+      <node id="изверг" label="изверг" />
+      <node id="ирод" label="ирод" />
+      <node id="истеричка" label="истеричка" />
+      <node id="отброс" label="отброс" />
+      <node id="мегера" label="мегера" />
+      <node id="шлюха" label="шлюха" />
+      <node id="мракобес" label="мракобес" />
+      <node id="еретик" label="еретик" />
+      <node id="мямля" label="мямля" />
+      <node id="нелюдь" label="нелюдь" />
+      <node id="неряха" label="неряха" />
+      <node id="нечестивец" label="нечестивец" />
+      <node id="однодневка" label="однодневка" />
+      <node id="отщепенец" label="отщепенец" />
+      <node id="паразит" label="паразит" />
+      <node id="паскуда" label="паскуда" />
+      <node id="потаскун" label="потаскун" />
+      <node id="потаскуха" label="потаскуха" />
+      <node id="похабник" label="похабник" />
+      <node id="пошляк" label="пошляк" />
+      <node id="проходимец" label="проходимец" />
+      <node id="врун" label="врун" />
+      <node id="развратник" label="развратник" />
+      <node id="распутник" label="распутник" />
+      <node id="слабак" label="слабак" />
+      <node id="слизняк" label="слизняк" />
+      <node id="собака" label="собака" />
+      <node id="шавка" label="шавка" />
+      <node id="тля" label="тля" />
+      <node id="торгаш" label="торгаш" />
+      <node id="тряпка" label="тряпка" />
+      <node id="урод" label="урод" />
+      <node id="хлыщ" label="хлыщ" />
+      <node id="холоп" label="холоп" />
+      <node id="шакал" label="шакал" />
+      <node id="шушера" label="шушера" />
+      <node id="язва" label="язва" />
+      <node id="цаца" label="цаца" />
+    </nodes>
+    <edges>
+      <edge id="0" source="мразь" target="сволочь" weight="0.656437118524" />
+      <edge id="1" source="мразь" target="чмо" weight="0.527395875861" />
+      <edge id="2" source="мразь" target="дрянь" weight="0.537850781624" />
+      <edge id="3" source="мразь" target="подонок" weight="0.591170089357" />
+      <edge id="4" source="мразь" target="пидор" weight="0.518412451546" />
+      <edge id="5" source="мразь" target="падла" weight="0.522889594689" />
+      <edge id="6" source="мразь" target="подлец" weight="0.537046708468" />
+      <edge id="7" source="мразь" target="шваль" weight="0.569549677127" />
+      <edge id="8" source="мразь" target="ублюдок" weight="0.514563306749" />
+      <edge id="9" source="мразь" target="гад" weight="0.568726688258" />
+      <edge id="10" source="мразь" target="гнида" weight="0.569496209819" />
+      <edge id="11" source="мразь" target="паскуда" weight="0.532630976003" />
+      <edge id="12" source="мразь" target="потаскун" weight="0.517189227942" />
+      <edge id="13" source="мразь" target="слизняк" weight="0.530707679798" />
+      <edge id="14" source="сволочь" target="идиот" weight="0.505596601977" />
+      <edge id="15" source="сволочь" target="придурок" weight="0.5836668514" />
+      <edge id="16" source="сволочь" target="чмо" weight="0.572070017649" />
+      <edge id="17" source="сволочь" target="быдло" weight="0.542268355715" />
+      <edge id="18" source="сволочь" target="дрянь" weight="0.577534552364" />
+      <edge id="19" source="сволочь" target="негодяй" weight="0.618561241901" />
+      <edge id="20" source="сволочь" target="подонок" weight="0.652525478954" />
+      <edge id="21" source="сволочь" target="пидор" weight="0.561104186059" />
+      <edge id="22" source="сволочь" target="падла" weight="0.609307093253" />
+      <edge id="23" source="сволочь" target="жмот" weight="0.548475334784" />
+      <edge id="24" source="сволочь" target="подлец" weight="0.632951740669" />
+      <edge id="25" source="сволочь" target="наглец" weight="0.520637675837" />
+      <edge id="26" source="сволочь" target="хам" weight="0.539439671249" />
+      <edge id="27" source="сволочь" target="шваль" weight="0.609224311888" />
+      <edge id="28" source="сволочь" target="стерва" weight="0.552251411194" />
+      <edge id="29" source="сволочь" target="ублюдок" weight="0.557779678108" />
+      <edge id="30" source="сволочь" target="гад" weight="0.654107244364" />
+      <edge id="31" source="сволочь" target="обормот" weight="0.544398233543" />
+      <edge id="32" source="сволочь" target="остолоп" weight="0.534316490077" />
+      <edge id="33" source="сволочь" target="охламон" weight="0.505882489994" />
+      <edge id="34" source="сволочь" target="паршивец" weight="0.524626402978" />
+      <edge id="35" source="сволочь" target="прохвост" weight="0.588083096694" />
+      <edge id="36" source="сволочь" target="гнида" weight="0.623800433172" />
+      <edge id="37" source="сволочь" target="говнюк" weight="0.572885166712" />
+      <edge id="38" source="сволочь" target="злыдень" weight="0.528632298443" />
+      <edge id="39" source="сволочь" target="ирод" weight="0.555860124703" />
+      <edge id="40" source="сволочь" target="паскуда" weight="0.590146902757" />
+      <edge id="41" source="сволочь" target="потаскун" weight="0.596189210924" />
+      <edge id="42" source="сволочь" target="потаскуха" weight="0.519999889124" />
+      <edge id="43" source="сволочь" target="похабник" weight="0.534159819498" />
+      <edge id="44" source="сволочь" target="проходимец" weight="0.503762436292" />
+      <edge id="45" source="сволочь" target="врун" weight="0.5224216736" />
+      <edge id="46" source="сволочь" target="распутник" weight="0.50468115685" />
+      <edge id="47" source="сволочь" target="шушера" weight="0.523975276033" />
+      <edge id="48" source="идиот" target="придурок" weight="0.606534806971" />
+      <edge id="49" source="идиот" target="негодяй" weight="0.504055574954" />
+      <edge id="50" source="идиот" target="пидор" weight="0.513360308934" />
+      <edge id="51" source="идиот" target="подлец" weight="0.523978013827" />
+      <edge id="52" source="идиот" target="наглец" weight="0.507220341234" />
+      <edge id="53" source="идиот" target="хам" weight="0.517922346135" />
+      <edge id="54" source="идиот" target="говнюк" weight="0.530373429349" />
+      <edge id="55" source="идиот" target="пошляк" weight="0.505949997275" />
+      <edge id="56" source="идиот" target="врун" weight="0.52637037091" />
+      <edge id="57" source="идиот" target="урод" weight="0.568736910676" />
+      <edge id="58" source="придурок" target="чмо" weight="0.605495074041" />
+      <edge id="59" source="придурок" target="отморозок" weight="0.542683868639" />
+      <edge id="60" source="придурок" target="подонок" weight="0.536883246387" />
+      <edge id="61" source="придурок" target="пидор" weight="0.583420303949" />
+      <edge id="62" source="придурок" target="падла" weight="0.549849764808" />
+      <edge id="63" source="придурок" target="жлоб" weight="0.519784967469" />
+      <edge id="64" source="придурок" target="жмот" weight="0.50956502364" />
+      <edge id="65" source="придурок" target="ублюдок" weight="0.533145484147" />
+      <edge id="66" source="придурок" target="обормот" weight="0.578231743662" />
+      <edge id="67" source="придурок" target="раздолбай" weight="0.535959089086" />
+      <edge id="68" source="придурок" target="остолоп" weight="0.566281710669" />
+      <edge id="69" source="придурок" target="охламон" weight="0.588092986457" />
+      <edge id="70" source="придурок" target="хмырь" weight="0.543825581369" />
+      <edge id="71" source="придурок" target="гондон" weight="0.500502682384" />
+      <edge id="72" source="придурок" target="говнюк" weight="0.573733843074" />
+      <edge id="73" source="придурок" target="потаскуха" weight="0.507301294183" />
+      <edge id="74" source="придурок" target="цаца" weight="0.505733792607" />
+      <edge id="75" source="чмо" target="быдло" weight="0.505327820302" />
+      <edge id="76" source="чмо" target="дрянь" weight="0.560503044965" />
+      <edge id="77" source="чмо" target="пидор" weight="0.618596709729" />
+      <edge id="78" source="чмо" target="пидарас" weight="0.545975799876" />
+      <edge id="79" source="чмо" target="падла" weight="0.622224061521" />
+      <edge id="80" source="чмо" target="жлоб" weight="0.547439189117" />
+      <edge id="81" source="чмо" target="жмот" weight="0.599237778362" />
+      <edge id="82" source="чмо" target="мымра" weight="0.567192809156" />
+      <edge id="83" source="чмо" target="шваль" weight="0.539194255002" />
+      <edge id="84" source="чмо" target="стерва" weight="0.546178174848" />
+      <edge id="85" source="чмо" target="ублюдок" weight="0.516840116052" />
+      <edge id="86" source="чмо" target="гад" weight="0.513366517993" />
+      <edge id="87" source="чмо" target="обормот" weight="0.577448030469" />
+      <edge id="88" source="чмо" target="раздолбай" weight="0.511607587184" />
+      <edge id="89" source="чмо" target="остолоп" weight="0.644056826635" />
+      <edge id="90" source="чмо" target="охламон" weight="0.667642720615" />
+      <edge id="91" source="чмо" target="паршивец" weight="0.574902899835" />
+      <edge id="92" source="чмо" target="хмырь" weight="0.581659245839" />
+      <edge id="93" source="чмо" target="гнида" weight="0.595743484441" />
+      <edge id="94" source="чмо" target="гондон" weight="0.619938296397" />
+      <edge id="95" source="чмо" target="говнюк" weight="0.621918439818" />
+      <edge id="96" source="чмо" target="ехидна" weight="0.544965151702" />
+      <edge id="97" source="чмо" target="злыдень" weight="0.616764069269" />
+      <edge id="98" source="чмо" target="злюка" weight="0.516238133385" />
+      <edge id="99" source="чмо" target="ирод" weight="0.529751428548" />
+      <edge id="100" source="чмо" target="мегера" weight="0.531477108758" />
+      <edge id="101" source="чмо" target="шлюха" weight="0.52543271551" />
+      <edge id="102" source="чмо" target="мямля" weight="0.548284239171" />
+      <edge id="103" source="чмо" target="неряха" weight="0.592227848922" />
+      <edge id="104" source="чмо" target="паскуда" weight="0.613929908572" />
+      <edge id="105" source="чмо" target="потаскун" weight="0.629867095952" />
+      <edge id="106" source="чмо" target="потаскуха" weight="0.621249161042" />
+      <edge id="107" source="чмо" target="похабник" weight="0.581432331259" />
+      <edge id="108" source="чмо" target="врун" weight="0.541741995768" />
+      <edge id="109" source="чмо" target="слабак" weight="0.538149529947" />
+      <edge id="110" source="чмо" target="слизняк" weight="0.513344342958" />
+      <edge id="111" source="чмо" target="шавка" weight="0.531645936884" />
+      <edge id="112" source="чмо" target="шушера" weight="0.524996401941" />
+      <edge id="113" source="чмо" target="цаца" weight="0.555127571223" />
+      <edge id="114" source="быдло" target="подонок" weight="0.529075916619" />
+      <edge id="115" source="быдло" target="хам" weight="0.540930602068" />
+      <edge id="116" source="быдло" target="шваль" weight="0.521089289726" />
+      <edge id="117" source="быдло" target="остолоп" weight="0.552335102792" />
+      <edge id="118" source="отморозок" target="подонок" weight="0.538162985536" />
+      <edge id="119" source="отморозок" target="пидор" weight="0.504610855144" />
+      <edge id="120" source="отморозок" target="пидарас" weight="0.509073320647" />
+      <edge id="121" source="отморозок" target="обормот" weight="0.519293078294" />
+      <edge id="122" source="отморозок" target="раздолбай" weight="0.527869556903" />
+      <edge id="123" source="отморозок" target="хмырь" weight="0.520544328175" />
+      <edge id="124" source="отморозок" target="нелюдь" weight="0.529804957901" />
+      <edge id="125" source="дрянь" target="подлец" weight="0.537232194988" />
+      <edge id="126" source="дрянь" target="шваль" weight="0.52011092334" />
+      <edge id="127" source="дрянь" target="гнида" weight="0.504336670117" />
+      <edge id="128" source="дрянь" target="мямля" weight="0.505814615167" />
+      <edge id="129" source="дрянь" target="паскуда" weight="0.500677259508" />
+      <edge id="130" source="дрянь" target="тряпка" weight="0.513857046608" />
+      <edge id="131" source="негодяй" target="подонок" weight="0.606838844808" />
+      <edge id="132" source="негодяй" target="каналья" weight="0.50187715704" />
+      <edge id="133" source="негодяй" target="подлец" weight="0.66237395502" />
+      <edge id="134" source="негодяй" target="наглец" weight="0.561521076703" />
+      <edge id="135" source="негодяй" target="прохвост" weight="0.576702714704" />
+      <edge id="136" source="негодяй" target="изверг" weight="0.541760818667" />
+      <edge id="137" source="негодяй" target="потаскун" weight="0.564921608388" />
+      <edge id="138" source="негодяй" target="потаскуха" weight="0.517530087463" />
+      <edge id="139" source="негодяй" target="похабник" weight="0.516073732637" />
+      <edge id="140" source="негодяй" target="пошляк" weight="0.554746887995" />
+      <edge id="141" source="негодяй" target="проходимец" weight="0.596209485645" />
+      <edge id="142" source="негодяй" target="врун" weight="0.552344718512" />
+      <edge id="143" source="негодяй" target="развратник" weight="0.615586602612" />
+      <edge id="144" source="негодяй" target="распутник" weight="0.595974266144" />
+      <edge id="145" source="скотина" target="злыдень" weight="0.512763587557" />
+      <edge id="146" source="скотина" target="собака" weight="0.506816145552" />
+      <edge id="147" source="подонок" target="пидор" weight="0.51737456562" />
+      <edge id="148" source="подонок" target="жлоб" weight="0.531380160856" />
+      <edge id="149" source="подонок" target="подлец" weight="0.561062079401" />
+      <edge id="150" source="подонок" target="хам" weight="0.516126088928" />
+      <edge id="151" source="подонок" target="ублюдок" weight="0.507353181886" />
+      <edge id="152" source="подонок" target="говнюк" weight="0.501207137071" />
+      <edge id="153" source="подонок" target="потаскун" weight="0.527212427867" />
+      <edge id="154" source="подонок" target="потаскуха" weight="0.517019039656" />
+      <edge id="155" source="пидор" target="пидарас" weight="0.585879548862" />
+      <edge id="156" source="пидор" target="падла" weight="0.670172728157" />
+      <edge id="157" source="пидор" target="жлоб" weight="0.531522112511" />
+      <edge id="158" source="пидор" target="жмот" weight="0.546639535107" />
+      <edge id="159" source="пидор" target="стерва" weight="0.554764892368" />
+      <edge id="160" source="пидор" target="ублюдок" weight="0.507608973056" />
+      <edge id="161" source="пидор" target="гад" weight="0.534039957504" />
+      <edge id="162" source="пидор" target="обормот" weight="0.59118711501" />
+      <edge id="163" source="пидор" target="раздолбай" weight="0.539708790453" />
+      <edge id="164" source="пидор" target="остолоп" weight="0.527872994333" />
+      <edge id="165" source="пидор" target="охламон" weight="0.619264812405" />
+      <edge id="166" source="пидор" target="хмырь" weight="0.512784470906" />
+      <edge id="167" source="пидор" target="гнида" weight="0.597907868683" />
+      <edge id="168" source="пидор" target="гондон" weight="0.586528816501" />
+      <edge id="169" source="пидор" target="говнюк" weight="0.625492835438" />
+      <edge id="170" source="пидор" target="злыдень" weight="0.565345841332" />
+      <edge id="171" source="пидор" target="мегера" weight="0.505680112112" />
+      <edge id="172" source="пидор" target="шлюха" weight="0.509148921418" />
+      <edge id="173" source="пидор" target="неряха" weight="0.527732048118" />
+      <edge id="174" source="пидор" target="паскуда" weight="0.598791507759" />
+      <edge id="175" source="пидор" target="потаскун" weight="0.577623288904" />
+      <edge id="176" source="пидор" target="потаскуха" weight="0.603612716188" />
+      <edge id="177" source="пидор" target="похабник" weight="0.537351139657" />
+      <edge id="178" source="пидор" target="слабак" weight="0.542038352563" />
+      <edge id="179" source="пидор" target="цаца" weight="0.56094787393" />
+      <edge id="180" source="пидарас" target="падла" weight="0.546419812337" />
+      <edge id="181" source="пидарас" target="обормот" weight="0.549168531105" />
+      <edge id="182" source="пидарас" target="раздолбай" weight="0.591233093351" />
+      <edge id="183" source="пидарас" target="охламон" weight="0.570904954138" />
+      <edge id="184" source="пидарас" target="паршивец" weight="0.527183340204" />
+      <edge id="185" source="пидарас" target="гнида" weight="0.520275690994" />
+      <edge id="186" source="пидарас" target="гондон" weight="0.592008252837" />
+      <edge id="187" source="пидарас" target="говнюк" weight="0.568238236718" />
+      <edge id="188" source="пидарас" target="ехидна" weight="0.504596436523" />
+      <edge id="189" source="пидарас" target="злыдень" weight="0.547792976667" />
+      <edge id="190" source="пидарас" target="паскуда" weight="0.597390393227" />
+      <edge id="191" source="пидарас" target="потаскун" weight="0.590319431434" />
+      <edge id="192" source="пидарас" target="потаскуха" weight="0.618410110731" />
+      <edge id="193" source="пидарас" target="похабник" weight="0.565749651514" />
+      <edge id="194" source="пидарас" target="цаца" weight="0.545283588087" />
+      <edge id="195" source="каналья" target="подлец" weight="0.592265802959" />
+      <edge id="196" source="каналья" target="паршивец" weight="0.507496618474" />
+      <edge id="197" source="падла" target="стерва" weight="0.525051642256" />
+      <edge id="198" source="падла" target="ублюдок" weight="0.523198217684" />
+      <edge id="199" source="падла" target="гад" weight="0.532762744495" />
+      <edge id="200" source="падла" target="обормот" weight="0.521445287644" />
+      <edge id="201" source="падла" target="охламон" weight="0.597085862878" />
+      <edge id="202" source="падла" target="паршивец" weight="0.518436334315" />
+      <edge id="203" source="падла" target="гнида" weight="0.609740404992" />
+      <edge id="204" source="падла" target="гондон" weight="0.529950214212" />
+      <edge id="205" source="падла" target="говнюк" weight="0.625882406781" />
+      <edge id="206" source="падла" target="злыдень" weight="0.560103363164" />
+      <edge id="207" source="падла" target="ирод" weight="0.503586027724" />
+      <edge id="208" source="падла" target="паскуда" weight="0.653003463094" />
+      <edge id="209" source="падла" target="потаскун" weight="0.548479914592" />
+      <edge id="210" source="падла" target="потаскуха" weight="0.556158470933" />
+      <edge id="211" source="падла" target="похабник" weight="0.501325845866" />
+      <edge id="212" source="жлоб" target="жмот" weight="0.553412977682" />
+      <edge id="213" source="жлоб" target="хам" weight="0.520151370523" />
+      <edge id="214" source="жлоб" target="обормот" weight="0.524716146616" />
+      <edge id="215" source="жлоб" target="охламон" weight="0.55929289704" />
+      <edge id="216" source="жлоб" target="говнюк" weight="0.539556393177" />
+      <edge id="217" source="жлоб" target="потаскун" weight="0.519569917581" />
+      <edge id="218" source="жлоб" target="похабник" weight="0.535248798588" />
+      <edge id="219" source="жлоб" target="врун" weight="0.529376396159" />
+      <edge id="220" source="жлоб" target="слабак" weight="0.525696734364" />
+      <edge id="221" source="жмот" target="скопидом" weight="0.536246862787" />
+      <edge id="222" source="жмот" target="мымра" weight="0.516775177725" />
+      <edge id="223" source="жмот" target="стерва" weight="0.514918135738" />
+      <edge id="224" source="жмот" target="обормот" weight="0.515179690836" />
+      <edge id="225" source="жмот" target="остолоп" weight="0.504798424512" />
+      <edge id="226" source="жмот" target="охламон" weight="0.588195892123" />
+      <edge id="227" source="жмот" target="паршивец" weight="0.506989723582" />
+      <edge id="228" source="жмот" target="гондон" weight="0.535914642315" />
+      <edge id="229" source="жмот" target="говнюк" weight="0.559087028688" />
+      <edge id="230" source="жмот" target="мегера" weight="0.554192292955" />
+      <edge id="231" source="жмот" target="шлюха" weight="0.512442067253" />
+      <edge id="232" source="жмот" target="мямля" weight="0.563774100547" />
+      <edge id="233" source="жмот" target="неряха" weight="0.597892836648" />
+      <edge id="234" source="жмот" target="паскуда" weight="0.549847269832" />
+      <edge id="235" source="жмот" target="потаскун" weight="0.638190362977" />
+      <edge id="236" source="жмот" target="потаскуха" weight="0.615149203522" />
+      <edge id="237" source="жмот" target="похабник" weight="0.576299539055" />
+      <edge id="238" source="жмот" target="врун" weight="0.552067101589" />
+      <edge id="239" source="жмот" target="цаца" weight="0.546213935471" />
+      <edge id="240" source="скопидом" target="брюзга" weight="0.516611112969" />
+      <edge id="241" source="скопидом" target="неряха" weight="0.56757324592" />
+      <edge id="242" source="скопидом" target="потаскун" weight="0.543780217106" />
+      <edge id="243" source="скопидом" target="похабник" weight="0.527781548138" />
+      <edge id="244" source="скопидом" target="развратник" weight="0.506868628571" />
+      <edge id="245" source="скопидом" target="распутник" weight="0.521687189172" />
+      <edge id="246" source="скопидом" target="торгаш" weight="0.552285711904" />
+      <edge id="247" source="зараза" target="язва" weight="0.584834665325" />
+      <edge id="248" source="мымра" target="остолоп" weight="0.505408845962" />
+      <edge id="249" source="мымра" target="охламон" weight="0.5721263363" />
+      <edge id="250" source="мымра" target="гнида" weight="0.503297961926" />
+      <edge id="251" source="мымра" target="говнюк" weight="0.504202371466" />
+      <edge id="252" source="мымра" target="злюка" weight="0.500410733104" />
+      <edge id="253" source="мымра" target="мегера" weight="0.548838547353" />
+      <edge id="254" source="мымра" target="мямля" weight="0.505224080039" />
+      <edge id="255" source="мымра" target="неряха" weight="0.569158062175" />
+      <edge id="256" source="мымра" target="потаскун" weight="0.573849511807" />
+      <edge id="257" source="мымра" target="потаскуха" weight="0.548553455848" />
+      <edge id="258" source="мымра" target="цаца" weight="0.536027223995" />
+      <edge id="259" source="подлец" target="наглец" weight="0.563960803516" />
+      <edge id="260" source="подлец" target="хам" weight="0.592903032326" />
+      <edge id="261" source="подлец" target="шваль" weight="0.513445156422" />
+      <edge id="262" source="подлец" target="стерва" weight="0.500231899236" />
+      <edge id="263" source="подлец" target="обормот" weight="0.530964582052" />
+      <edge id="264" source="подлец" target="паршивец" weight="0.58982379214" />
+      <edge id="265" source="подлец" target="прохвост" weight="0.668616229451" />
+      <edge id="266" source="подлец" target="хвастун" weight="0.519149688246" />
+      <edge id="267" source="подлец" target="гнида" weight="0.522711668485" />
+      <edge id="268" source="подлец" target="говнюк" weight="0.53766102649" />
+      <edge id="269" source="подлец" target="изверг" weight="0.523149454852" />
+      <edge id="270" source="подлец" target="мямля" weight="0.58257676155" />
+      <edge id="271" source="подлец" target="паскуда" weight="0.574615135096" />
+      <edge id="272" source="подлец" target="потаскун" weight="0.604874989804" />
+      <edge id="273" source="подлец" target="потаскуха" weight="0.521244627345" />
+      <edge id="274" source="подлец" target="похабник" weight="0.547056608329" />
+      <edge id="275" source="подлец" target="пошляк" weight="0.561309565316" />
+      <edge id="276" source="подлец" target="проходимец" weight="0.50222303282" />
+      <edge id="277" source="подлец" target="врун" weight="0.580873880381" />
+      <edge id="278" source="подлец" target="развратник" weight="0.538902003435" />
+      <edge id="279" source="подлец" target="распутник" weight="0.540055799348" />
+      <edge id="280" source="наглец" target="хам" weight="0.500348907312" />
+      <edge id="281" source="наглец" target="паршивец" weight="0.506960610676" />
+      <edge id="282" source="наглец" target="хвастун" weight="0.502560574104" />
+      <edge id="283" source="наглец" target="мямля" weight="0.573281991054" />
+      <edge id="284" source="наглец" target="потаскун" weight="0.527038825265" />
+      <edge id="285" source="наглец" target="похабник" weight="0.55426420285" />
+      <edge id="286" source="наглец" target="распутник" weight="0.532623502293" />
+      <edge id="287" source="наглец" target="слабак" weight="0.508894617219" />
+      <edge id="288" source="хам" target="потаскун" weight="0.505781389705" />
+      <edge id="289" source="хам" target="похабник" weight="0.548859328309" />
+      <edge id="290" source="хам" target="распутник" weight="0.517561392761" />
+      <edge id="291" source="шваль" target="остолоп" weight="0.55479854099" />
+      <edge id="292" source="шваль" target="прохвост" weight="0.55755014244" />
+      <edge id="293" source="шваль" target="мямля" weight="0.508271725774" />
+      <edge id="294" source="шваль" target="неряха" weight="0.510310120278" />
+      <edge id="295" source="шваль" target="паскуда" weight="0.543551489033" />
+      <edge id="296" source="шваль" target="потаскун" weight="0.562888929002" />
+      <edge id="297" source="шваль" target="похабник" weight="0.511146209917" />
+      <edge id="298" source="шваль" target="проходимец" weight="0.523876370876" />
+      <edge id="299" source="шваль" target="шушера" weight="0.584371006288" />
+      <edge id="300" source="стерва" target="обормот" weight="0.538279710492" />
+      <edge id="301" source="стерва" target="охламон" weight="0.52794579672" />
+      <edge id="302" source="стерва" target="говнюк" weight="0.515699627927" />
+      <edge id="303" source="стерва" target="истеричка" weight="0.511671790921" />
+      <edge id="304" source="стерва" target="мегера" weight="0.527093162325" />
+      <edge id="305" source="стерва" target="шлюха" weight="0.556932546619" />
+      <edge id="306" source="стерва" target="мямля" weight="0.512395079778" />
+      <edge id="307" source="стерва" target="паскуда" weight="0.586403246479" />
+      <edge id="308" source="стерва" target="потаскун" weight="0.51647353943" />
+      <edge id="309" source="стерва" target="потаскуха" weight="0.531849414781" />
+      <edge id="310" source="ублюдок" target="гнида" weight="0.517005605692" />
+      <edge id="311" source="ублюдок" target="урод" weight="0.529912112778" />
+      <edge id="312" source="гад" target="гнида" weight="0.564716718367" />
+      <edge id="313" source="гад" target="ехидна" weight="0.550665844967" />
+      <edge id="314" source="гад" target="злыдень" weight="0.514433596321" />
+      <edge id="315" source="гад" target="паскуда" weight="0.547360132171" />
+      <edge id="316" source="гад" target="слизняк" weight="0.573667973942" />
+      <edge id="317" source="оболтус" target="охламон" weight="0.526901452075" />
+      <edge id="318" source="оболтус" target="мямля" weight="0.511216719944" />
+      <edge id="319" source="оболтус" target="потаскун" weight="0.593253591463" />
+      <edge id="320" source="оболтус" target="похабник" weight="0.519746145015" />
+      <edge id="321" source="оболтус" target="цаца" weight="0.521931777456" />
+      <edge id="322" source="обормот" target="раздолбай" weight="0.538409346448" />
+      <edge id="323" source="обормот" target="остолоп" weight="0.560184519019" />
+      <edge id="324" source="обормот" target="охламон" weight="0.619987984568" />
+      <edge id="325" source="обормот" target="паршивец" weight="0.575185504498" />
+      <edge id="326" source="обормот" target="прохвост" weight="0.537151939296" />
+      <edge id="327" source="обормот" target="гондон" weight="0.510627254856" />
+      <edge id="328" source="обормот" target="говнюк" weight="0.574048091368" />
+      <edge id="329" source="обормот" target="злыдень" weight="0.570669237678" />
+      <edge id="330" source="обормот" target="мямля" weight="0.58866444904" />
+      <edge id="331" source="обормот" target="неряха" weight="0.552422083897" />
+      <edge id="332" source="обормот" target="паскуда" weight="0.596597834019" />
+      <edge id="333" source="обормот" target="потаскун" weight="0.617848354405" />
+      <edge id="334" source="обормот" target="потаскуха" weight="0.581566282109" />
+      <edge id="335" source="обормот" target="похабник" weight="0.59788561258" />
+      <edge id="336" source="обормот" target="врун" weight="0.524146351749" />
+      <edge id="337" source="обормот" target="слабак" weight="0.526630521651" />
+      <edge id="338" source="обормот" target="цаца" weight="0.50626638793" />
+      <edge id="339" source="раздолбай" target="остолоп" weight="0.50843668222" />
+      <edge id="340" source="раздолбай" target="охламон" weight="0.518991610334" />
+      <edge id="341" source="раздолбай" target="гондон" weight="0.526900339903" />
+      <edge id="342" source="раздолбай" target="неряха" weight="0.512776283898" />
+      <edge id="343" source="раздолбай" target="потаскун" weight="0.559415822382" />
+      <edge id="344" source="раздолбай" target="похабник" weight="0.563880598819" />
+      <edge id="345" source="раздолбай" target="распутник" weight="0.518883379528" />
+      <edge id="346" source="раздолбай" target="слабак" weight="0.539952061861" />
+      <edge id="347" source="раздолбай" target="цаца" weight="0.512756992907" />
+      <edge id="348" source="остолоп" target="охламон" weight="0.600411841502" />
+      <edge id="349" source="остолоп" target="паршивец" weight="0.515332470408" />
+      <edge id="350" source="остолоп" target="гнида" weight="0.506157153114" />
+      <edge id="351" source="остолоп" target="гондон" weight="0.523395738013" />
+      <edge id="352" source="остолоп" target="говнюк" weight="0.548632655619" />
+      <edge id="353" source="остолоп" target="злыдень" weight="0.585155519769" />
+      <edge id="354" source="остолоп" target="мямля" weight="0.539867571822" />
+      <edge id="355" source="остолоп" target="неряха" weight="0.53927855708" />
+      <edge id="356" source="остолоп" target="паскуда" weight="0.552418986974" />
+      <edge id="357" source="остолоп" target="потаскун" weight="0.588203825449" />
+      <edge id="358" source="остолоп" target="похабник" weight="0.571516465915" />
+      <edge id="359" source="остолоп" target="слабак" weight="0.504859474805" />
+      <edge id="360" source="остолоп" target="шушера" weight="0.5117829635" />
+      <edge id="361" source="остолоп" target="цаца" weight="0.548908649144" />
+      <edge id="362" source="охламон" target="паршивец" weight="0.6144292792" />
+      <edge id="363" source="охламон" target="хмырь" weight="0.573055454689" />
+      <edge id="364" source="охламон" target="гнида" weight="0.552472566311" />
+      <edge id="365" source="охламон" target="гондон" weight="0.581460357643" />
+      <edge id="366" source="охламон" target="говнюк" weight="0.607967337506" />
+      <edge id="367" source="охламон" target="злыдень" weight="0.56573588891" />
+      <edge id="368" source="охламон" target="ирод" weight="0.506432591464" />
+      <edge id="369" source="охламон" target="мегера" weight="0.537801550707" />
+      <edge id="370" source="охламон" target="шлюха" weight="0.532186345005" />
+      <edge id="371" source="охламон" target="мямля" weight="0.593242920068" />
+      <edge id="372" source="охламон" target="неряха" weight="0.606070847981" />
+      <edge id="373" source="охламон" target="паскуда" weight="0.617111716757" />
+      <edge id="374" source="охламон" target="потаскун" weight="0.6461797825" />
+      <edge id="375" source="охламон" target="потаскуха" weight="0.643437822701" />
+      <edge id="376" source="охламон" target="похабник" weight="0.59168444519" />
+      <edge id="377" source="охламон" target="врун" weight="0.528734681494" />
+      <edge id="378" source="охламон" target="слабак" weight="0.562930774168" />
+      <edge id="379" source="охламон" target="цаца" weight="0.609142319044" />
+      <edge id="380" source="паршивец" target="прохвост" weight="0.501366125115" />
+      <edge id="381" source="паршивец" target="гнида" weight="0.583129471339" />
+      <edge id="382" source="паршивец" target="говнюк" weight="0.54780665609" />
+      <edge id="383" source="паршивец" target="ехидна" weight="0.527507372091" />
+      <edge id="384" source="паршивец" target="злыдень" weight="0.571474377831" />
+      <edge id="385" source="паршивец" target="ирод" weight="0.541480383031" />
+      <edge id="386" source="паршивец" target="мегера" weight="0.548220275335" />
+      <edge id="387" source="паршивец" target="мямля" weight="0.536101250486" />
+      <edge id="388" source="паршивец" target="неряха" weight="0.507375650523" />
+      <edge id="389" source="паршивец" target="паскуда" weight="0.670947601239" />
+      <edge id="390" source="паршивец" target="потаскун" weight="0.642571534146" />
+      <edge id="391" source="паршивец" target="потаскуха" weight="0.577796558539" />
+      <edge id="392" source="паршивец" target="похабник" weight="0.554693552025" />
+      <edge id="393" source="паршивец" target="цаца" weight="0.539671657521" />
+      <edge id="394" source="прохвост" target="говнюк" weight="0.502308463582" />
+      <edge id="395" source="прохвост" target="мямля" weight="0.538716659116" />
+      <edge id="396" source="прохвост" target="потаскун" weight="0.507630396854" />
+      <edge id="397" source="прохвост" target="похабник" weight="0.52838048994" />
+      <edge id="398" source="прохвост" target="пошляк" weight="0.525122546227" />
+      <edge id="399" source="прохвост" target="проходимец" weight="0.584930340749" />
+      <edge id="400" source="прохвост" target="врун" weight="0.566610569298" />
+      <edge id="401" source="прохвост" target="развратник" weight="0.504035944714" />
+      <edge id="402" source="прохвост" target="распутник" weight="0.532056975572" />
+      <edge id="403" source="хвастун" target="хитрец" weight="0.522439096772" />
+      <edge id="404" source="хвастун" target="брюзга" weight="0.534435306762" />
+      <edge id="405" source="хвастун" target="мямля" weight="0.589602142789" />
+      <edge id="406" source="хвастун" target="неряха" weight="0.527805980701" />
+      <edge id="407" source="хвастун" target="потаскун" weight="0.56899296745" />
+      <edge id="408" source="хвастун" target="похабник" weight="0.575648950109" />
+      <edge id="409" source="хвастун" target="врун" weight="0.64812245725" />
+      <edge id="410" source="хвастун" target="развратник" weight="0.514110849303" />
+      <edge id="411" source="хвастун" target="распутник" weight="0.551714111988" />
+      <edge id="412" source="тварь" target="ехидна" weight="0.528070199127" />
+      <edge id="413" source="хмырь" target="гнида" weight="0.50837302357" />
+      <edge id="414" source="хмырь" target="говнюк" weight="0.521925169043" />
+      <edge id="415" source="упырь" target="нелюдь" weight="0.556874826611" />
+      <edge id="416" source="буян" target="распутник" weight="0.508210386642" />
+      <edge id="417" source="брюзга" target="злюка" weight="0.515062626912" />
+      <edge id="418" source="брюзга" target="мегера" weight="0.570049310848" />
+      <edge id="419" source="брюзга" target="мямля" weight="0.554171581708" />
+      <edge id="420" source="брюзга" target="неряха" weight="0.56603219287" />
+      <edge id="421" source="брюзга" target="потаскун" weight="0.558176307946" />
+      <edge id="422" source="брюзга" target="похабник" weight="0.605931457502" />
+      <edge id="423" source="брюзга" target="пошляк" weight="0.503670145515" />
+      <edge id="424" source="брюзга" target="врун" weight="0.538659067317" />
+      <edge id="425" source="брюзга" target="развратник" weight="0.560822148865" />
+      <edge id="426" source="брюзга" target="распутник" weight="0.540590414678" />
+      <edge id="427" source="брюзга" target="хлыщ" weight="0.513666752083" />
+      <edge id="428" source="гнида" target="говнюк" weight="0.524696269775" />
+      <edge id="429" source="гнида" target="злыдень" weight="0.564164877383" />
+      <edge id="430" source="гнида" target="ирод" weight="0.51297730183" />
+      <edge id="431" source="гнида" target="неряха" weight="0.538491282703" />
+      <edge id="432" source="гнида" target="паскуда" weight="0.629551909051" />
+      <edge id="433" source="гнида" target="потаскун" weight="0.5730430343" />
+      <edge id="434" source="гнида" target="похабник" weight="0.513026436126" />
+      <edge id="435" source="гнида" target="цаца" weight="0.564739121391" />
+      <edge id="436" source="гондон" target="говнюк" weight="0.536120741281" />
+      <edge id="437" source="гондон" target="злыдень" weight="0.515943933646" />
+      <edge id="438" source="гондон" target="неряха" weight="0.514448198048" />
+      <edge id="439" source="гондон" target="паскуда" weight="0.578571886345" />
+      <edge id="440" source="гондон" target="потаскун" weight="0.518621464027" />
+      <edge id="441" source="гондон" target="потаскуха" weight="0.571777945166" />
+      <edge id="442" source="гондон" target="цаца" weight="0.56094353835" />
+      <edge id="443" source="говнюк" target="злыдень" weight="0.527315516072" />
+      <edge id="444" source="говнюк" target="мямля" weight="0.545183751562" />
+      <edge id="445" source="говнюк" target="неряха" weight="0.540663886394" />
+      <edge id="446" source="говнюк" target="паскуда" weight="0.588895150999" />
+      <edge id="447" source="говнюк" target="потаскун" weight="0.579583209035" />
+      <edge id="448" source="говнюк" target="потаскуха" weight="0.592914552961" />
+      <edge id="449" source="говнюк" target="похабник" weight="0.554831501173" />
+      <edge id="450" source="говнюк" target="врун" weight="0.535738854924" />
+      <edge id="451" source="говнюк" target="слабак" weight="0.506224889931" />
+      <edge id="452" source="говнюк" target="цаца" weight="0.551181904377" />
+      <edge id="453" source="ехидна" target="жаба" weight="0.506780116283" />
+      <edge id="454" source="ехидна" target="злыдень" weight="0.618764739916" />
+      <edge id="455" source="ехидна" target="злюка" weight="0.568162226175" />
+      <edge id="456" source="ехидна" target="изверг" weight="0.501798098862" />
+      <edge id="457" source="ехидна" target="ирод" weight="0.560434149437" />
+      <edge id="458" source="ехидна" target="мегера" weight="0.665172490252" />
+      <edge id="459" source="ехидна" target="мямля" weight="0.510459362768" />
+      <edge id="460" source="ехидна" target="неряха" weight="0.528254646526" />
+      <edge id="461" source="ехидна" target="нечестивец" weight="0.596665669224" />
+      <edge id="462" source="ехидна" target="паскуда" weight="0.657841332579" />
+      <edge id="463" source="ехидна" target="потаскун" weight="0.62051382665" />
+      <edge id="464" source="ехидна" target="потаскуха" weight="0.60465557441" />
+      <edge id="465" source="ехидна" target="похабник" weight="0.578747017827" />
+      <edge id="466" source="ехидна" target="распутник" weight="0.569410313736" />
+      <edge id="467" source="ехидна" target="слизняк" weight="0.563935520691" />
+      <edge id="468" source="мочалка" target="неряха" weight="0.515998990139" />
+      <edge id="469" source="мочалка" target="тряпка" weight="0.593389379052" />
+      <edge id="470" source="злыдень" target="злюка" weight="0.539547669268" />
+      <edge id="471" source="злыдень" target="ирод" weight="0.544337915918" />
+      <edge id="472" source="злыдень" target="мегера" weight="0.53610159677" />
+      <edge id="473" source="злыдень" target="неряха" weight="0.593546787549" />
+      <edge id="474" source="злыдень" target="паскуда" weight="0.657221431348" />
+      <edge id="475" source="злыдень" target="потаскун" weight="0.645156808865" />
+      <edge id="476" source="злыдень" target="потаскуха" weight="0.593892589382" />
+      <edge id="477" source="злыдень" target="похабник" weight="0.569188792958" />
+      <edge id="478" source="злыдень" target="шавка" weight="0.515994909635" />
+      <edge id="479" source="злыдень" target="цаца" weight="0.580105529457" />
+      <edge id="480" source="злюка" target="мегера" weight="0.574634588363" />
+      <edge id="481" source="злюка" target="мямля" weight="0.548612015689" />
+      <edge id="482" source="злюка" target="неряха" weight="0.636481797896" />
+      <edge id="483" source="злюка" target="потаскун" weight="0.605479134142" />
+      <edge id="484" source="злюка" target="потаскуха" weight="0.558409047682" />
+      <edge id="485" source="злюка" target="похабник" weight="0.574921654746" />
+      <edge id="486" source="злюка" target="цаца" weight="0.515678453155" />
+      <edge id="487" source="изверг" target="нечестивец" weight="0.515353338719" />
+      <edge id="488" source="изверг" target="потаскун" weight="0.505446340237" />
+      <edge id="489" source="ирод" target="нечестивец" weight="0.55456948641" />
+      <edge id="490" source="ирод" target="паскуда" weight="0.617274816001" />
+      <edge id="491" source="ирод" target="потаскун" weight="0.588823931368" />
+      <edge id="492" source="истеричка" target="мегера" weight="0.563736743767" />
+      <edge id="493" source="истеричка" target="шлюха" weight="0.5482138113" />
+      <edge id="494" source="истеричка" target="неряха" weight="0.515413895879" />
+      <edge id="495" source="истеричка" target="потаскун" weight="0.523301767915" />
+      <edge id="496" source="истеричка" target="потаскуха" weight="0.544937651578" />
+      <edge id="497" source="истеричка" target="похабник" weight="0.511421082972" />
+      <edge id="498" source="истеричка" target="слабак" weight="0.512843228985" />
+      <edge id="499" source="истеричка" target="урод" weight="0.501368865867" />
+      <edge id="500" source="мегера" target="шлюха" weight="0.513373979668" />
+      <edge id="501" source="мегера" target="мямля" weight="0.546794989965" />
+      <edge id="502" source="мегера" target="неряха" weight="0.614688344651" />
+      <edge id="503" source="мегера" target="паскуда" weight="0.602542201913" />
+      <edge id="504" source="мегера" target="потаскун" weight="0.683393938485" />
+      <edge id="505" source="мегера" target="потаскуха" weight="0.670609682691" />
+      <edge id="506" source="мегера" target="похабник" weight="0.595840518401" />
+      <edge id="507" source="мегера" target="развратник" weight="0.539960438057" />
+      <edge id="508" source="мегера" target="распутник" weight="0.536900037635" />
+      <edge id="509" source="мегера" target="хлыщ" weight="0.536583905547" />
+      <edge id="510" source="шлюха" target="паскуда" weight="0.543339750694" />
+      <edge id="511" source="шлюха" target="потаскун" weight="0.555012297583" />
+      <edge id="512" source="шлюха" target="потаскуха" weight="0.568612862555" />
+      <edge id="513" source="мракобес" target="распутник" weight="0.532512646716" />
+      <edge id="514" source="еретик" target="нечестивец" weight="0.608565529034" />
+      <edge id="515" source="мямля" target="неряха" weight="0.624297157297" />
+      <edge id="516" source="мямля" target="паскуда" weight="0.564978099891" />
+      <edge id="517" source="мямля" target="потаскун" weight="0.692195184343" />
+      <edge id="518" source="мямля" target="потаскуха" weight="0.575655528146" />
+      <edge id="519" source="мямля" target="похабник" weight="0.682164201761" />
+      <edge id="520" source="мямля" target="врун" weight="0.607018391597" />
+      <edge id="521" source="мямля" target="развратник" weight="0.501324224015" />
+      <edge id="522" source="мямля" target="распутник" weight="0.577011346127" />
+      <edge id="523" source="мямля" target="слабак" weight="0.578281106563" />
+      <edge id="524" source="мямля" target="хлыщ" weight="0.593062263097" />
+      <edge id="525" source="мямля" target="цаца" weight="0.583270627257" />
+      <edge id="526" source="неряха" target="паскуда" weight="0.541682537704" />
+      <edge id="527" source="неряха" target="потаскун" weight="0.728497647186" />
+      <edge id="528" source="неряха" target="потаскуха" weight="0.643907900429" />
+      <edge id="529" source="неряха" target="похабник" weight="0.702776809215" />
+      <edge id="530" source="неряха" target="врун" weight="0.573588658151" />
+      <edge id="531" source="неряха" target="развратник" weight="0.528629501612" />
+      <edge id="532" source="неряха" target="распутник" weight="0.545977437343" />
+      <edge id="533" source="неряха" target="тряпка" weight="0.514758629137" />
+      <edge id="534" source="неряха" target="хлыщ" weight="0.568511598013" />
+      <edge id="535" source="неряха" target="цаца" weight="0.571255408339" />
+      <edge id="536" source="нечестивец" target="паскуда" weight="0.51150711494" />
+      <edge id="537" source="нечестивец" target="распутник" weight="0.551024554247" />
+      <edge id="538" source="паразит" target="тля" weight="0.570016319568" />
+      <edge id="539" source="паскуда" target="потаскун" weight="0.681175164444" />
+      <edge id="540" source="паскуда" target="потаскуха" weight="0.636102219542" />
+      <edge id="541" source="паскуда" target="похабник" weight="0.58161596414" />
+      <edge id="542" source="паскуда" target="цаца" weight="0.572764616664" />
+      <edge id="543" source="потаскун" target="потаскуха" weight="0.699649812998" />
+      <edge id="544" source="потаскун" target="похабник" weight="0.766223582076" />
+      <edge id="545" source="потаскун" target="пошляк" weight="0.50217745705" />
+      <edge id="546" source="потаскун" target="врун" weight="0.615147900331" />
+      <edge id="547" source="потаскун" target="развратник" weight="0.606191360922" />
+      <edge id="548" source="потаскун" target="распутник" weight="0.668690868897" />
+      <edge id="549" source="потаскун" target="слабак" weight="0.533971861577" />
+      <edge id="550" source="потаскун" target="хлыщ" weight="0.569421109321" />
+      <edge id="551" source="потаскун" target="цаца" weight="0.619923010818" />
+      <edge id="552" source="потаскуха" target="похабник" weight="0.620034298834" />
+      <edge id="553" source="потаскуха" target="врун" weight="0.565910918123" />
+      <edge id="554" source="потаскуха" target="развратник" weight="0.518382357196" />
+      <edge id="555" source="потаскуха" target="распутник" weight="0.55709356466" />
+      <edge id="556" source="потаскуха" target="цаца" weight="0.534897869834" />
+      <edge id="557" source="похабник" target="пошляк" weight="0.579224804484" />
+      <edge id="558" source="похабник" target="врун" weight="0.63782087967" />
+      <edge id="559" source="похабник" target="развратник" weight="0.593910374527" />
+      <edge id="560" source="похабник" target="распутник" weight="0.672360763302" />
+      <edge id="561" source="похабник" target="слабак" weight="0.542661308574" />
+      <edge id="562" source="похабник" target="хлыщ" weight="0.633441997071" />
+      <edge id="563" source="похабник" target="цаца" weight="0.594799407575" />
+      <edge id="564" source="пошляк" target="врун" weight="0.568036526859" />
+      <edge id="565" source="пошляк" target="развратник" weight="0.506018702194" />
+      <edge id="566" source="проходимец" target="распутник" weight="0.531462289374" />
+      <edge id="567" source="проходимец" target="торгаш" weight="0.501032838729" />
+      <edge id="568" source="врун" target="развратник" weight="0.551441387615" />
+      <edge id="569" source="врун" target="распутник" weight="0.566539151051" />
+      <edge id="570" source="врун" target="слабак" weight="0.539433638835" />
+      <edge id="571" source="врун" target="хлыщ" weight="0.552553132228" />
+      <edge id="572" source="развратник" target="распутник" weight="0.693243351202" />
+      <edge id="573" source="развратник" target="хлыщ" weight="0.549622435858" />
+      <edge id="574" source="распутник" target="хлыщ" weight="0.557890609852" />
+      <edge id="575" source="собака" target="шавка" weight="0.595311126974" />
+      <edge id="576" source="собака" target="шакал" weight="0.524673572544" />
+    </edges>
+  </graph>
+</gexf>

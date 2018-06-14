@@ -54,4 +54,7 @@ def process_ans():
     return render_template('index.html', response = response[0], puzzle = ', '.join(response[1][0]), uid=uid)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    import os
+    app.debug = True
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)

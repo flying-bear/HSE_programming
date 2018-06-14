@@ -21,17 +21,19 @@
 
 
 	<div class="container">
+		<br>
 		<h2> Это игра в "найди лишний".</h2>
 		<div>
-			<span>Найдите лишнее слово: <br>
-			{{words}} </span>
+			<span id='text'>Найдите лишнее слово: {{ puzzle }} </span>
 		</div>
-		<br> 
-		<form id="answer" method="GET">
+		<span>{{ response }}</span>
+		<br>
+		<form id="answer" method="POST">
 			<div class="form-group">
-				<label for="answerInput">Ответ: </label><br> <input type="text" class="form-control" id="answerInput" name="answer" required><!-- Ответ -->
+				<label for="answerInput">Ответ: </label><br> 
+				<input type="text" class="form-control" id="answerInput" name="answer" required><!-- Ответ -->
 			</div>
-			
+			<input type="hidden" name="uid" value="{{ uid }}">
 			<button type="submit" class="btn btn-primary">Готово</button>
 		</form>
 
